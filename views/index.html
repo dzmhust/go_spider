@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="/spider" method="GET">
+        棋手名: <input type="text" name="name"> 
+        <select name="sname">
+            <% for (var i=0; i<persion.length; i++) { %>       
+            <option value="<%=persion[i] %>">
+                <%=persion[i] %>
+            </option>    
+            <% } %>
+        </select>
+        <br>
+        时间段: <input type="date" name="startdate" required> 到 <input type="date" name="enddate">
+        <br>
+        <input type="submit" value="批量导出">
+    </form>
+
+    <%-info %>
+</body>
+</html>
